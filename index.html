@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/shandynotes/">
+  <base href="./">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,5 +43,10 @@
 <body>
 <script src="flutter_bootstrap.js" async></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  if (location.pathname !== "/" && !location.pathname.startsWith("/#") && !location.pathname.startsWith("/?")) {
+    location.replace("/#"+location.pathname);
+  }
+</script>
 </body>
 </html>
