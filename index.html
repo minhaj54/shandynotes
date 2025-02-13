@@ -2,60 +2,63 @@
 <html lang="en">
 <head>
   <base href="/">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <meta name="description" content="Shandy Notes - Your one-stop platform for high-quality notes on programming, technology, JEE, NEET, competitive exams, and academic subjects.">
-  <meta name="keywords" content="notes, programming notes, JEE notes, NEET notes, technology, competitive exams, study materials">
-  <meta name="author" content="Shandy Notes">
-  <meta name="robots" content="index, follow">
-
-  <!--  &lt;!&ndash; Open Graph Meta Tags (for social media sharing) &ndash;&gt;-->
-   <meta property="og:title" content="Shandy Notes - Find Notes for Programming, Technology, JEE, NEET & More">
-   <meta property="og:description" content="Explore a vast collection of notes for programming, technology, and competitive exams like JEE and NEET.">
-   <meta property="og:image" content="https://shandynotes.com/og-image.jpg">
-   <meta property="og:url" content="https://shandynotes.com">
-   <meta property="og:type" content="website">
-
-  <!--  &lt;!&ndash; Twitter Card &ndash;&gt;-->
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="Shandy Notes - High-Quality Notes for Programming, Technology, JEE, NEET & More">
-   <meta name="twitter:description" content="Access a rich library of study materials for programming, technology, and competitive exams.">
-   <meta name="twitter:image" content="https://shandynotes.com/twitter-image.jpg">
-
-  <!--  &lt;!&ndash; iOS meta tags & icons &ndash;&gt;-->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Shandy Notes">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!--  &lt;!&ndash; Favicon &ndash;&gt;-->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!--  &lt;!&ndash; Canonical URL &ndash;&gt;-->
-  <!--  <link rel="canonical" href="https://shandynotes.com">-->
-
   <title>Shandy Notes - Programming, JEE, NEET, Competitive Exams Notes</title>
   <link rel="manifest" href="manifest.json">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPV796FLFS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    gtag('config', 'G-PPV796FLFS');
-  </script>
+  <style>
+    /* Loading Screen Styles */
+    #loading-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-<script src="flutter_bootstrap.js" async></script>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-  if (location.pathname !== "/" && !location.pathname.startsWith("/#") && !location.pathname.startsWith("/?")) {
-    location.replace("/#"+location.pathname);
-  }
-</script>
+
+  <!-- Loading Indicator -->
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+
+  <script>
+    // Hide the loading screen when the page is fully loaded
+    window.addEventListener('load', function () {
+      document.getElementById('loading-screen').style.display = 'none';
+    });
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script>
+    if (location.pathname !== "/" && !location.pathname.startsWith("/#") && !location.pathname.startsWith("/?")) {
+      location.replace("/#"+location.pathname);
+    }
+  </script>
+
 </body>
 </html>
