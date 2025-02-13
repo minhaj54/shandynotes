@@ -85777,7 +85777,7 @@ if(s==null)s=m
 r=J.at(p.a.c,"Author")
 if(r==null)r=l
 q=t.p
-r=A.c6(A.a([k,new A.Pv(s,r,"https://shandynotes.com/book/"+A.k(J.at(p.a.c,n)),A.aHR(J.c8(J.at(p.a.c,"Price"))),o)],q),B.o,B.p,B.n)
+r=A.c6(A.a([k,new A.Pv(s,r,"https://shandynotes.com/#/book/"+A.k(J.at(p.a.c,n))+"%20Note",A.aHR(J.c8(J.at(p.a.c,"Price"))),o)],q),B.o,B.p,B.n)
 s=J.at(p.a.c,"Author")
 k=A.k(s==null?l:s)
 s=A.S(a).p2.w
